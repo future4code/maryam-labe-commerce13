@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Carrinho from './components/Carrinho/Carrinho';
+import CompraDeProdutos from './components/CompraDeProdutos/CompraDeProdutos';
 
 class App extends React.Component {
   state = {
@@ -35,12 +37,22 @@ class App extends React.Component {
         titulo: 'Viagem + show da Lady Gaga no planeta Chromatica',
         preco: 1000000
       },
-    ]
+    ],
+    carrinho: []
+  }
+
+  adicionarAoCarrinho = (id) => {
+    const itemCarrinho = this.state.produtos.find(produto => produto.id === id)
+
+    const novoArray = [...this.state.carrinho, itemCarrinho];
+    this.setState({ carrinho: novoArray });
   }
 
   render() {
     return (
       <div className="App">
+        <CompraDeProdutos produtos={this.state.produtos} />
+        <Carrinho produtosAdicionados={this.state.carrinho} />
       </div>
     );
   }
