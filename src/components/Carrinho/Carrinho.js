@@ -1,24 +1,62 @@
 import React from 'react';
-import CarrinhoItem from './CarrinhoItem';
 
 export default class Carrinho extends React.Component {
+  // state = {
+  //   carrinho: [
+  //     {
+  //       id: 7,
+  //       titulo: 'Viagem para Lua',
+  //       preco: 200000,
+  //       data: '17/07/2121',
+  //       foto: '',
+  //       quantidade: 1
+  //     },
+  //     {
+  //       id: 8,
+  //       titulo: 'Viagem para Aldebaran',
+  //       preco: 1200000,
+  //       data: '06/08/2121',
+  //       foto: '',
+  //       quantidade: 1
+  //     },
+  //   ]
+  // }
 
   exibirNoCarrinho = () => {
-    const listaProdutos = this.props.produtos.map((produto) => {
+    console.log("carrinho", this.props.carrinho)
+    const listaProdutos = this.props.carrinho.map((produto) => {
       return (
-        <CarrinhoItem
-          quantidade={1}
-          descricao={this.props.titulo}
-        />
+        <div>
+          <p>{produto.quantidade} x {produto.titulo}</p>
+          <button>+</button>
+          <button>-</button>
+          <button>Remover</button>
+        </div>
       )
     })
+    return listaProdutos;
   }
+  // exibirNoCarrinho = () => {
+  //   console.log("carrinho", this.state.carrinho)
+  //   const listaProdutos = this.state.carrinho.map((produto) => {
+  //     return (
+
+  //       <div>
+  //         <p>{produto.quantidade} x {produto.titulo}</p>
+  //         <button>+</button>
+  //         <button>-</button>
+  //         <button>Remover</button>
+  //       </div>
+  //     )
+  //   })
+  //   return listaProdutos;
+  // }
 
   render() {
     return (
       <div>
-        <h3>{this.props.tituloSecao}</h3>
-        {this.exibirNoCarrinho}
+        <h3>Carrinho de compras</h3>
+        {this.exibirNoCarrinho()}
       </div>
     )
   }
