@@ -97,7 +97,6 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <QuemSomos />
-        <Produtos />
         <Carrinho carrinho={this.state.carrinho} />
       </div>
     );
