@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
 import Carrinho from './components/Carrinho/Carrinho';
-import CompraDeProdutos from './components/CompraDeProdutos/CompraDeProdutos';
+// import CompraDeProdutos from './components/CompraDeProdutos/CompraDeProdutos';
+import Header from './components/Header/Header';
+import QuemSomos from './components/Header/QuemSomos';
 
 class App extends React.Component {
   state = {
@@ -76,6 +78,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Header/>
+        <QuemSomos/>
         <CompraDeProdutos produtos={this.state.produtos} />
         <Carrinho produtosAdicionados={this.state.carrinho} />
       </div>
