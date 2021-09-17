@@ -95,10 +95,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-        <QuemSomos/>
-        <CompraDeProdutos produtos={this.state.produtos} />  
-       <Carrinho produtosAdicionados={this.state.carrinho} />
+        <Header />
+        <QuemSomos />
+        <CompraDeProdutos produtos={this.state.produtos} />
+        <Carrinho carrinho={this.state.carrinho} />
       </div>
     );
   }
