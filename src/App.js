@@ -80,8 +80,8 @@ class App extends React.Component {
       <div className="App">
         <Header/>
         <QuemSomos/>
-        <CompraDeProdutos produtos={this.state.produtos} />
-        <Carrinho produtosAdicionados={this.state.carrinho} />
+        <CompraDeProdutos produtos={this.state.produtos} />  
+       <Carrinho produtosAdicionados={this.state.carrinho} />
       </div>
     );
   }
