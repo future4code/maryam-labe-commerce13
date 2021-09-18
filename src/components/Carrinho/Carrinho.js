@@ -22,20 +22,6 @@ export default class Carrinho extends React.Component {
   //   ]
   // }
 
-  exibirNoCarrinho = () => {
-    console.log("carrinho", this.props.carrinho)
-    const listaProdutos = this.props.carrinho.map((produto) => {
-      return (
-        <div>
-          <p>{produto.quantidade} x {produto.titulo}</p>
-          <button>+</button>
-          <button>-</button>
-          <button>Remover</button>
-        </div>
-      )
-    })
-    return listaProdutos;
-  }
   // exibirNoCarrinho = () => {
   //   console.log("carrinho", this.state.carrinho)
   //   const listaProdutos = this.state.carrinho.map((produto) => {
@@ -51,6 +37,22 @@ export default class Carrinho extends React.Component {
   //   })
   //   return listaProdutos;
   // }
+
+
+  exibirNoCarrinho = () => {
+    console.log("carrinho", this.props.carrinho)
+    const listaProdutos = this.props.carrinho.map((produto) => {
+      return (
+        <div>
+          <p>{produto.quantidade} x {produto.titulo}</p>
+          <button>+</button>
+          <button>-</button>
+          <button>Remover</button>
+        </div>
+      )
+    })
+    return listaProdutos;
+  }
 
   render() {
     return (
