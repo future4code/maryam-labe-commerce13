@@ -1,4 +1,4 @@
-### LABE-COMMERCE
+### lABE-COMMERCE
 
 Projeto desenvolvido para o curso de Web Full Stack da Labenu pelas pessoas estudantes:
 - Luigi Ferreira
